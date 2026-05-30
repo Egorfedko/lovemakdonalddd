@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обираємо час</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📅 1 червня</h1>
+
+    <p>
+        Коли тобі буде зручно зустрітись?
+    </p>
+
+    <div class="time-buttons">
+
+        <button class="time-btn">12:00</button>
+
+        <button class="time-btn">14:00</button>
+
+        <button class="time-btn">16:00</button>
+
+        <button class="time-btn">18:00</button>
+
+        <button class="time-btn">20:00</button>
+
+    </div>
+
+</div>
+
+<script>
+
+const buttons = document.querySelectorAll('.time-btn');
+
+buttons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+localStorage.setItem("meetingTime", button.innerText);
+window.location.href = "menu.html";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

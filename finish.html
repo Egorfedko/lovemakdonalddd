@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Побачення підтверджено ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd6e7,#ffb6c1,#ff9ab5);
+    padding:20px;
+}
+
+.container{
+    max-width:800px;
+    width:100%;
+    background:white;
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#ff4d88;
+    margin-bottom:20px;
+}
+
+.info{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.order{
+    background:#fff3f7;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.order h2{
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+.order ul{
+    padding-left:25px;
+}
+
+.order li{
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.message{
+    text-align:center;
+    font-size:22px;
+    color:#ff4d88;
+    line-height:1.6;
+}
+
+.hearts{
+    font-size:30px;
+    text-align:center;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💖 Побачення підтверджено 💖</h1>
+
+    <div class="info">
+        📅 1 червня<br>
+        🕒 <span id="time"></span>
+    </div>
+
+    <div class="order">
+        <h2>🍔 Наше замовлення</h2>
+
+        <ul id="foodList"></ul>
+    </div>
+
+    <div class="message">
+        Дуже чекаю нашої зустрічі ❤️<br>
+        Сподіваюся ми гарно проведемо час разом 🥰
+    </div>
+
+    <div class="hearts">
+        ❤️ 💖 ❤️ 💖 ❤️
+    </div>
+
+</div>
+
+<script>
+
+const time = localStorage.getItem("meetingTime");
+
+document.getElementById("time").textContent =
+time || "Час не обрано";
+
+const food =
+localStorage.getItem("food");
+
+const foodList =
+document.getElementById("foodList");
+
+if(food){
+
+    food.split(", ").forEach(item => {
+
+        const li =
+        document.createElement("li");
+
+        li.textContent = item;
+
+        foodList.appendChild(li);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

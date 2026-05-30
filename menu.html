@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Меню McDonald's ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#ffb6c1,#ff9ab5);
+    padding:40px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:rgba(255,255,255,.95);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#ff4d88;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:#666;
+}
+
+.category{
+    margin-top:35px;
+}
+
+.category h2{
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:12px;
+}
+
+.menu-item{
+    background:#fff3f7;
+    border-radius:15px;
+    padding:15px;
+    cursor:pointer;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.menu-item:hover{
+    transform:scale(1.03);
+}
+
+.menu-item input{
+    margin-right:10px;
+    transform:scale(1.2);
+}
+
+.menu-item:has(input:checked){
+    border-color:#ff4d88;
+    background:#ffe3ee;
+}
+
+.bottom{
+    text-align:center;
+    margin-top:40px;
+}
+
+.choose-btn{
+    border:none;
+    padding:18px 40px;
+    border-radius:999px;
+    background:#ff4d88;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.choose-btn:hover{
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍔 Що будемо замовляти?</h1>
+
+<p class="subtitle">
+Обирай усе що хочеш ❤️
+</p>
+
+<div class="category">
+<h2>🍔 Бургери</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Біг Мак">🍔 Біг Мак</label>
+
+<label class="menu-item"><input type="checkbox" value="Біг Тейсті">🍔 Біг Тейсті</label>
+
+<label class="menu-item"><input type="checkbox" value="Дабл Біг Тейсті">🍔 Дабл Біг Тейсті</label>
+
+<label class="menu-item"><input type="checkbox" value="Дабл Чізбургер">🧀 Дабл Чізбургер</label>
+
+<label class="menu-item"><input type="checkbox" value="Роял Чізбургер">🧀 Роял Чізбургер</label>
+
+<label class="menu-item"><input type="checkbox" value="Дабл Роял Чізбургер">🧀 Дабл Роял Чізбургер</label>
+
+<label class="menu-item"><input type="checkbox" value="МакЧікен">🍗 МакЧікен</label>
+
+<label class="menu-item"><input type="checkbox" value="Філе-о-Фіш">🐟 Філе-о-Фіш</label>
+
+<label class="menu-item"><input type="checkbox" value="Філе-о-Фіш Делюкс">🐟 Філе-о-Фіш Делюкс</label>
+
+<label class="menu-item"><input type="checkbox" value="МакКріспі Кремі Барбекю">🍔 МакКріспі Кремі Барбекю</label>
+
+<label class="menu-item"><input type="checkbox" value="МакКріспі Кремі Барбекю Делюкс">🍔 МакКріспі Кремі Барбекю Делюкс</label>
+
+</div>
+</div>
+
+<div class="category">
+<h2>🌯 Роли</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Чікен Рол">🌯 Чікен Рол</label>
+
+<label class="menu-item"><input type="checkbox" value="Кремі Барбекю Чікен Рол">🌯 Кремі Барбекю Чікен Рол</label>
+
+<label class="menu-item"><input type="checkbox" value="Фіш Рол">🌯 Фіш Рол</label>
+
+</div>
+</div>
+
+<div class="category">
+<h2>🍟 Закуски</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Картопля Фрі велика">🍟 Картопля Фрі велика</label>
+
+<label class="menu-item"><input type="checkbox" value="Картопляні діпи">🍟 Картопляні діпи</label>
+
+<label class="menu-item"><input type="checkbox" value="Картопля Фрі з сирним соусом і беконом">🧀 Сирна картопля</label>
+
+<label class="menu-item"><input type="checkbox" value="Чікен МакНагетс 6">🍗 МакНагетс 6 шт.</label>
+
+<label class="menu-item"><input type="checkbox" value="Чікен МакНагетс 9">🍗 МакНагетс 9 шт.</label>
+
+</div>
+</div>
+
+<div class="category">
+<h2>🥗 Салати</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Мікс салат">🥗 Мікс салат</label>
+
+</div>
+</div>
+
+<div class="category">
+<h2>☕ Напої</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Кока кола">🥤Кока кола</label>
+
+<label class="menu-item"><input type="checkbox" value="Фанта">🥤Фанта</label>
+
+<label class="menu-item"><input type="checkbox" value="Лате">☕ Лате</label>
+
+<label class="menu-item"><input type="checkbox" value="Капучино">☕ Капучино</label>
+
+<label class="menu-item"><input type="checkbox" value="Американо">☕ Американо</label>
+
+<label class="menu-item"><input type="checkbox" value="Еспресо">☕ Еспресо</label>
+
+<label class="menu-item"><input type="checkbox" value="МакШейк Шоколад">🥤 МакШейк Шоколад</label>
+
+<label class="menu-item"><input type="checkbox" value="МакШейк Ваніль">🥤 МакШейк Ваніль</label>
+
+<label class="menu-item"><input type="checkbox" value="МакШейк Полуниця">🥤 МакШейк Полуниця</label>
+
+</div>
+</div>
+
+<div class="category">
+<h2>🍦 Десерти</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Морозиво Ріжок">🍦 Морозиво Ріжок</label>
+
+<label class="menu-item"><input type="checkbox" value="МакСанді Шоколад">🍨 МакСанді Шоколад</label>
+
+<label class="menu-item"><input type="checkbox" value="МакСанді Карамель">🍨 МакСанді Карамель</label>
+
+<label class="menu-item"><input type="checkbox" value="МакСанді Полуниця">🍨 МакСанді Полуниця</label>
+
+<label class="menu-item"><input type="checkbox" value="МакФлурі Кіт Кат Шоколад">🍦 МакФлурі Кіт Кат Шоколад</label>
+
+<label class="menu-item"><input type="checkbox" value="МакФлурі Кіт Кат Карамель">🍦 МакФлурі Кіт Кат Карамель</label>
+
+<label class="menu-item"><input type="checkbox" value="МакФлурі Кіт Кат Полуниця">🍦 МакФлурі Кіт Кат Полуниця</label>
+
+<label class="menu-item"><input type="checkbox" value="МакПиріг Вишневий">🥧 МакПиріг Вишневий</label>
+
+<label class="menu-item"><input type="checkbox" value="Круасан Мигдалевий">🥐 Круасан Мигдалевий</label>
+
+</div>
+</div>
+
+<div class="category">
+<h2>🥫 Соуси</h2>
+
+<div class="menu-grid">
+
+<label class="menu-item"><input type="checkbox" value="Кетчуп">🥫 Кетчуп</label>
+
+<label class="menu-item"><input type="checkbox" value="Барбекю">🥫 Барбекю</label>
+
+<label class="menu-item"><input type="checkbox" value="Сирний">🥫 Сирний</label>
+
+<label class="menu-item"><input type="checkbox" value="Кисло-солодкий">🥫 Кисло-солодкий</label>
+
+<label class="menu-item"><input type="checkbox" value="Гірчичний">🥫 Гірчичний</label>
+
+<label class="menu-item"><input type="checkbox" value="Часниковий">🥫 Часниковий</label>
+
+</div>
+</div>
+
+<div class="bottom">
+<button class="choose-btn" id="chooseBtn">
+Обрати ❤️
+</button>
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("chooseBtn").addEventListener("click", () => {
+
+    const checked =
+    document.querySelectorAll(
+        'input[type="checkbox"]:checked'
+    );
+
+    let foods = [];
+
+    checked.forEach(item => {
+        foods.push(item.value);
+    });
+
+    if(foods.length === 0){
+        alert("Обери хоча б щось ❤️");
+        return;
+    }
+
+    localStorage.setItem(
+        "food",
+        foods.join(", ")
+    );
+
+    window.location.href = "finish.html";
+
+});
+
+</script>
+
+</body>
+</html>
